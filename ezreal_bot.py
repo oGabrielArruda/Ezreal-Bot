@@ -14,10 +14,10 @@ class EzrealBot():
         self.driver.get("https://facebook.com/pokes")
 
         fb_email = self.driver.find_element_by_xpath('//*[@id="email"]')
-        fb_email.send_keys('****')
+        fb_email.send_keys(email)
 
         fb_pwd = self.driver.find_element_by_xpath('//*[@id="pass"]')
-        fb_pwd.send_keys('****')
+        fb_pwd.send_keys(password)
 
         fb_login = self.driver.find_element_by_xpath('//*[@id="loginbutton"]')
         fb_login.click()        
@@ -30,6 +30,10 @@ class EzrealBot():
             button.click()
             sleep(10)
 
+print('Type your facebook email')
+email = input()
+print('Type your facebook email')
+password = input()
 bot = EzrealBot()
 bot.login()
 
